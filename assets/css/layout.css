@@ -6,16 +6,16 @@
 
 :root {
     /* FONTES */
-
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
 
     /* CORES DE FUNDO */
-
     --cinza-claro: #d7d7d7;
     --cinza-medio: #333333;
     --cinza-escuro: #0000007b;
+    --escuro: #000;
+    --claro: #fff;
 }
 
 * {
@@ -25,66 +25,68 @@
 }
 
 html, body {
-    height: 100vh;
-    background-color: #d7d7d7;
+    height: 100dvh;
+    background-color: var(--cinza-claro);
     font-family: var(--fonte1);
 }
 
 /* CABEÇALHO */
-
 header {
-    background-color: #000;
+    background-color: var(--escuro);
     color: #fff;
     text-align: center;
     padding: 50px 0px;
 }
 
-header > h1 {
+header h1 {
     font-family: var(--fonte2);
     font-variant: small-caps;
-    font-size: 10vw;
+    font-size: max(10vw, 3rem);
 }
 
-a {
-    color: #fff;
+header p {
+    font-size: max(1.5vw, 1.1rem);
+}
+
+header a {
+    color: var(--claro);
     text-decoration: underline;
     font-weight: bold;
 }
 
-a:hover {
+header a:hover {
     color: var(--cinza-claro);
 }
 
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 800px;
+    width: min(750px, 90vw);
     margin: auto;
 }
 
 /* SEÇÕES */
-
 section {
-    padding: 10vh 50px;
+    padding: 2rem;
     line-height: 2em;
     font-family: var(--fonte3);
-    width: 100%;
-    font-size: 130%;
+    font-size: max(2vw, 1.3rem);
 }
 
-section > p {
-    margin-bottom: 2em;
-}
-
-section > p.direita {
+section:nth-child(even) {
     text-align: right;
 }
 
-section.normal {
-    background-color: #fff;
-    color:#000;
+section:nth-child(2) {
+    background: url(../images/background01.jpg) no-repeat fixed center / cover;
+}
+
+section:nth-child(5) {
+    background: url(../images/background02.jpg) no-repeat fixed center / cover;
+}
+
+section.texto {
+    background-color: var(--claro);
 }
 
 section.imagem {
@@ -93,38 +95,25 @@ section.imagem {
     box-shadow: inset 0px 0px 6px 4px var(--cinza-medio);
 }
 
-section.imagem > p {
+section.imagem p {
     display: inline-block;
-    padding: 15px;
+    padding: 1rem;
     background-color: var(--cinza-escuro);
-    text-shadow: 2px 2px 1px #000;
-}
-
-section.direita {
-    display: flex;
-    justify-content: flex-end;
-}
-
-section#img01 {
-    background: url(../images/background01.jpg) no-repeat center fixed;
-    background-size: cover;
-    height: 100dvh;
-}
-
-section#img02 {
-    background: url(../images/background02.jpg) no-repeat center fixed;
-    background-size: cover;
-    height: 100dvh;
+    text-shadow: 2px 2px 1px var(--cinza-escuro);
 }
 
 /* RODAPÉ */
-
 footer {
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
+    background-color: var(--escuro);
+    color: var(--claro);
+    padding: 0.8rem;
     text-align: center;
-    line-height: 2em;
-    max-width: 800px;
     margin: auto;
+    width: min(750px, 90vw);
+}
+
+footer a {
+    color: var(--claro);
+    text-decoration: none;
+    font-weight: 600;
 }
