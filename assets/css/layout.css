@@ -108,11 +108,13 @@ section.direita {
 section#img01 {
     background: url(../images/background01.jpg) no-repeat center fixed;
     background-size: cover;
+    height: 100dvh;
 }
 
 section#img02 {
     background: url(../images/background02.jpg) no-repeat center fixed;
     background-size: cover;
+    height: 100dvh;
 }
 
 /* RODAPÉ */
