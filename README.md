@@ -1,2 +1,5 @@
 # projeto-cordel
- Desafio de HTML5 e CSS3 do CursoemVideo (Projeto Cordel)
+
+Site dedicado a homenagear a poesia em cordel, utilizando a obra de Milton Duarte.
+
+Acesse o site <a href="https://nicollascsantos.github.io/cordel-moderno/" target="_blank">aqui</a>.
