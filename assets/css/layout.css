@@ -106,12 +106,12 @@ section.direita {
 }
 
 section#img01 {
-    background: url(../imagens/background01.jpg) no-repeat center fixed;
+    background: url(../images/background01.jpg) no-repeat center fixed;
     background-size: cover;
 }
 
 section#img02 {
-    background: url(../imagens/background02.jpg) no-repeat center fixed;
+    background: url(../images/background02.jpg) no-repeat center fixed;
     background-size: cover;
 }
 
